@@ -1,0 +1,124 @@
+@import "mixin/mixin";
+
+.hero{
+    @include bg-hero(url("../images/hero/shopping2.jpg"));
+    &--obras{
+        @include bg-hero(url("../images/obra.webp"));
+    }
+    &--obras-destacadas{
+        @include bg-hero(url("../images/obra.webp"));
+    }
+    &--servicios{
+        @include bg-hero(url("../images/obra.webp"));
+    }
+    &--nosotros{
+        @include bg-hero(url("../images/obra.webp"));
+    }
+    &__container{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        height: 100%;
+        @include media-q(mobile){
+            padding: 2rem;    
+        }
+        @include media-q(tablet){
+            padding: 5rem 8rem 0;
+        }
+        @include media-q(desktop){
+            padding: 5rem 18rem 0;
+        }
+        &--obras{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            height: 100%;
+            p{
+                font-weight: 500;
+                color: $white;
+                letter-spacing: 1px;
+                @include media-q(mobile){
+                    font-size: $big-size;
+                    text-align: center;
+                }
+                @include media-q(tablet){
+                    font-size: $hero-size;
+                }
+            }
+        }
+    }
+    &__p, &__title{
+        color: $white;
+    }
+    &__p{
+        display: inline-block;
+        position: relative;
+        padding: 0 2rem;
+        &::before{
+            content: '';
+            position: absolute;
+            width: 300px;
+            height: 3px;
+            background-color: $mustard;
+            top: 0.5rem;
+            left: -18rem;
+            overflow-x: hidden;
+        }
+    }
+    &__title{
+        font-weight: 600;
+        padding: 2rem 0;
+        letter-spacing: 2px;
+        @include media-q(mobile){
+            font-size: $big-size;
+        }
+        @include media-q(tablet){
+            font-size: $hero-size;
+        }
+        &--brand{
+            @include media-q(mobile){
+                font-family: $font-brand;
+                font-size: $big-size;
+                color: $white;
+                font-weight: 600;
+                padding: 4rem 0;
+            }
+            @include media-q(tablet){
+                font-size: $hero-size;
+                line-height: 0.8;
+            }
+            @include media-q(desktop){
+                font-size: $hero-size;
+                line-height: 0.8;
+            }
+            span{
+                @include media-q(mobile){
+                    font-family: $font-brand;
+                    font-size: $mid-size;
+                    font-weight: 400;
+                }
+                @include media-q(tablet){
+                    font-size: $extra-size;
+                }
+                @include media-q(desktop){
+                    font-size: 1.6rem;
+                }
+            }
+        }
+    }
+    &__btn{
+        width: 220px;
+        height: 75px;
+        border: none;
+        border-radius: 15px;
+        background-color: $mustard;
+        cursor: pointer;
+        a{
+            color: $white;
+            font-size: $small-size;
+            font-weight: 500;
+            text-decoration: none;
+        }
+    }
+}
