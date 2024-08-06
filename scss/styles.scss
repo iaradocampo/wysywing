@@ -1,9 +1,27 @@
-@import "components/variables/variables";
-@import "components/reset";
-@import "utilities/utilities";
-@import "components/navbar";
-@import "components/hero";
-@import "utilities/box";
-@import "components/text";
-@import "components/form";
-@import "components/footer";
+@import "./utilities/variables";
+@import "./utilities/mixins";
+@import "./utilities/helpers";
+
+@import "./base/reset";
+@import "./base/typography.scss";
+@import "./base/base";
+
+@import "./layout/header";
+@import "./layout/footer";
+
+@import "./pages/obras";
+@import "./pages/obras-destacadas";
+@import "./pages/servicios";
+@import "./pages/nosotros";
+
+
+
+// @import "components/variables/variables";
+// @import "components/reset";
+// @import "utilities/utilities";
+// @import "components/navbar";
+// @import "components/hero";
+// @import "utilities/box";
+// @import "components/text";
+// @import "components/form";
+// @import "components/footer";

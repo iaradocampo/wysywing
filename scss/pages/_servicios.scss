@@ -1,0 +1,36 @@
+.box-servicios{
+    text-align: center;
+    width: 300px;
+    p{
+        font-size: $small-size;
+        margin-top: 1.2rem;
+    }
+}
+
+.servicios{
+    width: 450px;
+    height: 330px;
+    border-radius: 10px;
+    box-shadow: -1px 6px 32px -10px rgba(0,0,0,0.73);
+    svg{
+        width: 3rem;
+    }
+    h3{
+        font-size: $extra-size;
+        font-weight: 500;
+    }
+    .flex{
+        p{
+            font-weight: 600;
+            font-size: $small-size;
+            color: $blue;
+            padding-right: 8px;
+        }
+        svg{
+            width: 20px;
+            path{
+                fill: $blue;
+            }
+        }
+    }
+}

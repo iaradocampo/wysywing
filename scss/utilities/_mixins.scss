@@ -1,0 +1,27 @@
+@mixin media-q($breakpoint){
+    @if $breakpoint == desktop{
+        @media (min-width: 992px){
+            @content;
+        }
+    }
+    @if $breakpoint == tablet{
+        @media (min-width: 768px){
+            @content;
+        }
+    }
+    @if $breakpoint == mobile{
+        @media (min-width: 280px){
+            @content;
+        }
+    }
+}
+
+@mixin bg-hero($image){
+    background: {
+        image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), $image;
+        size: cover;
+        position: center;
+    }
+    height: 70vh;
+    position: relative;
+}
