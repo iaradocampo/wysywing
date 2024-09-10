@@ -1,16 +1,17 @@
+//HERO
 .hero{
-    @include bg-hero(url("../images/hero/shopping2.jpg"));
+    @include bg-hero(url("../assets/images/edificio-construccion.jpg"));
     &--obras{
-        @include bg-hero(url("../images/obra.webp"));
+        @include bg-hero(url("../assets/images/obra.webp"));
     }
     &--obras-destacadas{
-        @include bg-hero(url("../images/obra.webp"));
+        @include bg-hero(url("../assets/images/construccion.jpg"));
     }
     &--servicios{
-        @include bg-hero(url("../images/obra.webp"));
+        @include bg-hero(url("../assets/images/obra.webp"));
     }
     &--nosotros{
-        @include bg-hero(url("../images/obra.webp"));
+        @include bg-hero(url("../assets/images/obra.webp"));
     }
     &__container{
         display: flex;
@@ -120,11 +121,157 @@
         }
     }
 }
+//FLOATTING BUTTON WHATSAPP
+.wpp-container{
+    position: fixed;
+    bottom: 4rem;
+    @include media-q(mobile){
+        right: 10px;
+    }
+    @include media-q(tablet){
+        right: 40px;
+    }
+    svg{
+        width: 65px;
+    }
+}
+//FEATURED SECTION INDEX
+.bg-obras-destacadas{
+    height: 100%;
+    background-color: $blue;
+    h2{
+        color: $white;
+        @include media-q(mobile){
+            padding: 2rem;
+        }
+        @include media-q(desktop){
+            padding: 0;
+        }
+    }
+    .obra-destacada-card{
+       height: 100%;
+       @include media-q(mobile){
+        padding: 0 2rem;
+       }
+       @include media-q(tablet){
+        padding: 0 6rem;
+       }
+       @include media-q(desktop){
+        padding: 0 10rem;
+       }
+       @media (min-width: 1400px){
+        padding: 0;
+       }
+        &__img{
+            width: 100%;
+            height: 500px;
+            img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            }
+        }
+        &__title{
+            font-weight: 500;
+            color: $white;
+            padding-left: 10px;
+            @include media-q(mobile){
+                font-size: $small-size;
+            }
+            @include media-q(desktop){
+                font-size: $mid-size;
+            }
+        }
+        &__subtitle{
+            @extend .obra-destacada-card__title;
+            color: $mustard;
+            padding-right: 8px;
+        }
+        h3{
+            font-size: $extra-size;
+            font-weight: 500;
+            color: $white; 
+            margin-bottom: 1rem;
+        }
+        hr{
+            border: 1px solid $gray;
+        }
+        svg{
+            width: 20px;
+            path{
+                fill: $mustard;
+            }
+        }
+    }
+}
 
+.box-contacto{
+    @include media-q(mobile){
+        width: 100%;
+        height: 100%;
+        background-color: $white;
+        box-shadow: 9px 5px 21px 0px rgba(0,0,0,0.49);
+    }
+    @include media-q(tablet){
+        width: 30rem;
+        height: 46rem;
+    }
+    @media (min-width: 992px) and (max-width: 1399px){
+        width: 35rem;
+        height: 50rem;
+    }
+    @media (min-width: 1400px){
+        width: 660px;
+        height: 50rem;
+    }
+    h3{
+        @include media-q(mobile){
+            font-family: $font-brand;
+            font-size: $big-size;
+            font-weight: 800;
+            color: $blue;
+            padding: 2rem;
+        }
+        @include media-q(desktop){
+            padding: 2rem 5rem 0 3rem;
+        }
+    }
+}
+
+.box-info{
+    @include media-q(mobile){
+        width: 100%;
+        height: auto;
+        background-color: $blue;
+        box-shadow: 9px 5px 21px 0px rgba(0,0,0,0.49);
+    }
+    @include media-q(tablet){
+        width: 450px;
+        height: 500px;
+        margin: 47rem 3rem 0 -14rem;
+    }
+    @media (min-width: 992px) and (max-width: 1399px){
+        width: 30rem;
+        height: 30rem;
+        margin: 50rem 3rem 0 -13rem;
+    }
+    @media (min-width: 1400px){
+        width: 32rem;
+        height: 28rem;
+        margin: 30rem 3rem 3rem -4rem;
+        box-shadow: 12px 29px 57px 4px rgba(0,0,0,0.5);
+    }
+    h2{
+        color: $white;
+        padding: 2rem;
+    }
+    svg{
+        width: 4rem;
+        margin: 0 10px;
+    }
+}
+//FORM EN INDEX
 form{
-    // display: flex;
-    // justify-content: center;
-    // height: 100%;
     input{
         width: 100%;
         height: 3rem;
@@ -214,170 +361,5 @@ form{
         @include media-q(desktop){
             margin: 2rem 6rem 2rem 3rem;
         }
-    }
-}
-
-.wpp-container{
-    position: fixed;
-    bottom: 4rem;
-    @include media-q(mobile){
-        right: 10px;
-    }
-    @include media-q(tablet){
-        right: 40px;
-    }
-    svg{
-        width: 65px;
-    }
-}
-
-.bg-industrias{
-    height: 100%;
-    background-color: $blue;
-    h2{
-        color: $white;
-        @include media-q(mobile){
-            padding: 2rem;
-        }
-        @include media-q(desktop){
-            padding: 0;
-        }
-    }
-    .box-industrias{
-       height: 100%;
-       @include media-q(mobile){
-        padding: 0 2rem;
-       }
-       @include media-q(tablet){
-        padding: 0 6rem;
-       }
-       @include media-q(desktop){
-        padding: 0 10rem;
-       }
-       @media (min-width: 1400px){
-        padding: 0;
-       }
-       .container-img{
-            width: 100%;
-            height: 500px;
-           img{
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-           }
-        }
-        h3{
-            font-size: $extra-size;
-            font-weight: 500;
-            color: $white; 
-            margin-bottom: 1rem;
-        }
-        hr{
-            border: 1px solid $gray;
-        }
-        svg{
-            width: 20px;
-            path{
-                fill: $mustard;
-            }
-        }
-        .ind-title{
-            font-weight: 500;
-            color: $white;
-            padding-left: 10px;
-            @include media-q(mobile){
-                font-size: $small-size;
-            }
-            @include media-q(desktop){
-                font-size: $mid-size;
-            }
-        }
-        .ind-subtitle{
-            @extend .ind-title;
-            color: $mustard;
-            padding-right: 8px;
-        }
-    }
-}
-
-.box-contacto{
-    @include media-q(mobile){
-        width: 100%;
-        height: 100%;
-        background-color: $white;
-        box-shadow: 9px 5px 21px 0px rgba(0,0,0,0.49);
-    }
-    @include media-q(tablet){
-        width: 30rem;
-        height: 46rem;
-    }
-    @media (min-width: 992px) and (max-width: 1399px){
-        width: 35rem;
-        height: 50rem;
-    }
-    @media (min-width: 1400px){
-        width: 660px;
-        height: 50rem;
-    }
-    h3{
-        @include media-q(mobile){
-            font-family: $font-brand;
-            font-size: $big-size;
-            font-weight: 800;
-            color: $blue;
-            padding: 2rem;
-        }
-        @include media-q(desktop){
-            padding: 2rem 5rem 0 3rem;
-        }
-    }
-}
-
-.box-info{
-    @include media-q(mobile){
-        width: 100%;
-        height: auto;
-        background-color: $blue;
-        box-shadow: 9px 5px 21px 0px rgba(0,0,0,0.49);
-    }
-    @include media-q(tablet){
-        width: 450px;
-        height: 500px;
-        margin: 47rem 3rem 0 -14rem;
-    }
-    @media (min-width: 992px) and (max-width: 1399px){
-        width: 30rem;
-        height: 30rem;
-        margin: 50rem 3rem 0 -13rem;
-    }
-    @media (min-width: 1400px){
-        width: 32rem;
-        height: 28rem;
-        margin: 30rem 3rem 3rem -4rem;
-        box-shadow: 12px 29px 57px 4px rgba(0,0,0,0.5);
-    }
-    h2{
-        color: $white;
-        padding: 2rem;
-    }
-    svg{
-        width: 4rem;
-        margin: 0 10px;
-    }
-}
-
-.container-form{
-    @media (min-width: 992px) and (max-width: 1400px){
-        width: 100%;
-        padding-right: 15px;
-        padding-left: 15px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    @media (min-width: 992px){
-        max-width: 900px;
-    }
-    @media (min-width: 1200px) and (max-width: 1400px){
-        max-width: 1000px;
     }
 }

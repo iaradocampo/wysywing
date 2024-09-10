@@ -18,7 +18,7 @@
 
 @mixin bg-hero($image){
     background: {
-        image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), $image;
+        image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), $image;
         size: cover;
         position: center;
     }

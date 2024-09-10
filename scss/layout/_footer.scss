@@ -13,7 +13,7 @@ footer{
             grid-template-columns: repeat(3, 1fr);
             padding: 5rem 0;
         }
-        .box{
+        .footer-item{
             @include media-q(mobile){
                 display: flex;
                 justify-content: flex-start;
@@ -39,7 +39,15 @@ footer{
                     }
                 }
             }
-            #title-footer{
+            p{
+                font-size: $small-size;
+                color: $white;
+                padding: 0.4rem;
+                font-weight: 400;
+            }
+        }
+        .footer-text{
+            h4{
                 font-family: $font-brand;
                 font-size: $big-size;
                 font-weight: 600;
@@ -52,10 +60,7 @@ footer{
                 }
             }
             p{
-                font-size: $small-size;
-                color: $white;
-                padding: 0.4rem;
-                font-weight: 400;
+                padding-left: 0;
             }
         }
         ul{
